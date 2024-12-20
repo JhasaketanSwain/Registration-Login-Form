@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+    .container {
+      width: 300px;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    .success {
+      color: green;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .switch-btn {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 14px;
+      color: #007bff;
+      cursor: pointer;
+    }
+    .switch-btn:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="registerContainer">
+    <h2>Register</h2>
+    <form id="registerForm">
+      <div class="form-group">
+        <label for="regUsername">Username</label>
+        <input type="text" id="regUsername">
+        <span class="error" id="regUsernameError"></span>
+      </div>
+      <div class="form-group">
+        <label for="regPassword">Password</label>
+        <input type="password" id="regPassword">
+        <span class="error" id="regPasswordError"></span>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <div class="switch-btn" id="switchToLogin">Already have an account? Login</div>
+  </div>
+
+  <div class="container" id="loginContainer" style="display: none;">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="loginUsername">Username</label>
+        <input type="text" id="loginUsername">
+        <span class="error" id="loginUsernameError"></span>
+      </div>
+      <div class="form-group">
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword">
+        <span class="error" id="loginPasswordError"></span>
+      </div>
+      <button type="submit">Login</button>
+      <span class="success" id="loginSuccessMessage"></span>
+      <span class="error" id="loginErrorMessage"></span>
+    </form>
+    <div class="switch-btn" id="switchToRegister">Don't have an account? Register</div>
+  </div>
+<script type="text/javascript" src="login.js"></script>
+</body>
+</html>
